@@ -180,6 +180,13 @@ def draw_lines(n, point, window):
     #          ** FIRST DO A CONCRETE EXAMPLE BY HAND! **
     ###########################################################################
     # -------------------------------------------------------------------------
+    start = rg.Point(point.x,point.y-100)
+    for k in range(n):
+        end = rg.Point(start.x+100,start.y)
+        line = rg.Line(start,end)
+        line.attach_to(window)
+        start.y += 201/n
+    window.render()
 
 
 
